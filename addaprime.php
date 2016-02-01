@@ -32,3 +32,18 @@ function all_combinations() {
 	}
 	return $combinations;
 }
+
+function is_additive() {
+	foreach( all_combinations() as $combination ) {
+		$x = $combination[0];
+		$y = $combination[1];
+		if( secret_together($x, $y) <> secret_apart($x, $y)) return false;
+	}
+	return true;
+}
+
+if( is_additive() ) {
+	echo "Congratulations. The secret() function is indeed additive.";
+} else {
+	echo "Sorry. The secret() function is not additive.";
+}
