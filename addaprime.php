@@ -23,3 +23,12 @@ function secret_apart($x, $y) {
 	return secret($x) + secret($y);
 }
 
+function all_combinations() {
+	$combinations = array();
+	foreach (all_primes() as $x) {
+		foreach (all_primes() as $y) {
+			$combinations[] = array( $x, $y );
+		}
+	}
+	return $combinations;
+}
