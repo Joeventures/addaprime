@@ -33,3 +33,11 @@ def additive?(combinations)
   end
   true
 end
+
+c = all_combinations(input)
+if additive?(c)
+  puts "Congratulations. The secret() function is indeed additive."
+else
+  puts "Sorry. The secret() function is not additive."
+end
+
