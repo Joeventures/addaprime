@@ -12,3 +12,10 @@ def all_primes(input)
   Prime.each(input).to_a
 end
 
+def secret_together(x,y)
+  secret(x+y)
+end
+
+def secret_apart(x,y)
+  secret(x) + secret(y)
+end
