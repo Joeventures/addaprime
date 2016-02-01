@@ -1,5 +1,4 @@
 require 'prime'
-
 input = ARGV[0].to_i
 
 # secret(x+y) == secret(x) + secret(y) for each combination
@@ -19,3 +18,15 @@ end
 def secret_apart(x,y)
   secret(x) + secret(y)
 end
+
+def all_combinations(input)
+  combinations = Array.new
+  all_primes(input).each do |x|
+    all_primes(input).each do |y|
+      combinations.push([x,y])
+    end
+  end
+  combinations
+end
+
+
