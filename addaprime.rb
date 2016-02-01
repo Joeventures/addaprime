@@ -1,6 +1,8 @@
 require 'prime'
 input = ARGV[0].to_i
 
+abort "Please input an integer larger than 2." unless input > 2
+
 def secret(number)
   number
 end
