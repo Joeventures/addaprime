@@ -1,8 +1,6 @@
 require 'prime'
 input = ARGV[0].to_i
 
-# secret(x+y) == secret(x) + secret(y) for each combination
-
 def secret(number)
   number
 end
@@ -29,4 +27,9 @@ def all_combinations(input)
   combinations
 end
 
-
+def additive?(combinations)
+  combinations.each do |x,y|
+    return false if secret_together(x,y) == secret_apart(x,y)
+  end
+  true
+end
