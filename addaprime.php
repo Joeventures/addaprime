@@ -14,3 +14,12 @@ function all_primes() {
 	}
 	return $primes;
 }
+
+function secret_together($x, $y) {
+	return secret($x + $y);
+}
+
+function secret_apart($x, $y) {
+	return secret($x) + secret($y);
+}
+
