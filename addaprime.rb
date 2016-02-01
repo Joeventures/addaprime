@@ -29,7 +29,7 @@ end
 
 def additive?(combinations)
   combinations.each do |x,y|
-    return false if secret_together(x,y) == secret_apart(x,y)
+    return false unless secret_together(x,y) == secret_apart(x,y)
   end
   true
 end
